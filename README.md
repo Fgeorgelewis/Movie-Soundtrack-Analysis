@@ -3,11 +3,11 @@
 
 ## Overview
 
-As a huge fan of rap music, I’ve always been fascinated by the energy, emotion, and cultural impact it brings — not just to music, but to everything it touches. Some of the most memorable tracks I’ve ever heard came from unexpected places, like Metro Boomin’s *Spider-Man: Into the Spider-Verse* album or Post Malone’s *Sunflower*. These songs didn’t just elevate playlists — they elevated the movies themselves.
+As a huge fan of rap music, I’ve always been fascinated by the energy, emotion, and impact it can have on the individual. Rap is such an influential force that in recent years it has made its way into Hollywood. Some of my favorite tracks that I still listen to today came from movies, like Metro Boomin’s *Self Love*, Pop Money's *Another Dimension* or Post Malone’s *Sunflower* from the most recent Spiderman movies. 
 
 Rap is more than just a genre. It’s a movement, and when it collides with the movie industry, something powerful happens. That got me thinking: are movies with rap soundtracks more successful? Do they perform better in theaters? Do audiences rate them higher?
 
-This project explores that intersection — music and film — by analyzing how movies featuring rap soundtracks stack up against those with other genres. From box office numbers to IMDb ratings and release strategies, I set out to uncover the story behind the beats.
+This project explores that intersection — music and film — by analyzing how movies featuring rap soundtracks stack up against those with other genres. From box office numbers to IMDb and MPAA ratings, I set out to uncover trends in this new era of filmmaking.
 
 ---
 
@@ -19,7 +19,7 @@ The dataset was built using a combination of methods:
 - **APIs**: Retrieved additional metadata (IMDb rating, MPAA rating, and genre info) using the OMDb and Last.fm APIs.
 - **CSV Files**: Integrated supplementary Spotify data for understanding genre popularity.
 
-To keep the analysis meaningful, I focused on high-performing movies — specifically those that grossed over $100 million. The final master DataFrame consisted of 234 movies released in the last 10 years.
+To keep the analysis meaningful, I focused on high-performing movies — specifically those that grossed over $100 million. The final data frame consisted of 234 movies released in the last 10 years.
 
 ---
 
@@ -37,7 +37,7 @@ Before diving into movies, I wanted to validate the influence of rap in the musi
 
 I started by visualizing which soundtrack genres were most common across all movies.
 
-- **Top 3**: Classical, Electronic, Instrumental.
+- **Top 3**: Classical, Electronic, Instrumental - more traditional film scoring genres.
 - **Next Group**: Rap, Pop, Rock — more mainstream music genres.
 
 These results were interesting because they show how popular music genres like rap are breaking into the traditional film score space.
@@ -56,7 +56,7 @@ I compared average box office earnings for the top six most common soundtrack ge
 
 ### IMDb Ratings by Soundtrack Genre
 
-Next, I looked at average IMDb ratings. Instrumental was again at the top. Rap, however, ranked sixth, with an average score of 6.7.
+Next, I looked at average IMDb ratings. Instrumental was again at the top. Rap, however, ranked sixth, with an average score of 6.7. 
 
 ![IMDb Ratings by Genre](plots/imdb_rating_by_genre.png)
 ---
@@ -86,10 +86,10 @@ It was surprising to see PG as the most common rating for movies with rap soundt
 
 I analyzed the number of movie releases by month:
 
-- **Rap Soundtrack Films**: July, February, June, May, August.
+- **Rap Soundtrack Films**: Feburary and summer months.
 - **Non-Rap Films**: December and summer months.
 
-This pattern suggests summer is a prime season for rap films, and February’s spike aligns with Black History Month.
+This trend indicates that summer is a peak season for both rap and non-rap soundtrack films, while the February spike in rap soundtrack releases may be connected to Black History Month.
 
 ![Release Month Distribution](plots/rap_non_rap_seasons.png)
 
@@ -105,7 +105,7 @@ Movies with rap soundtracks were more likely to be live action (12) than animate
 
 ### Most Common Movie Genres (for Rap Soundtracks)
 
-The top genres among rap soundtrack films were:
+The top movie genres among rap soundtrack films were:
 
 1. Action
 2. Adventure
@@ -125,7 +125,7 @@ I visualized trends in the six most common soundtrack genres over the last 10 ye
 
 ### Which Studios Release Rap Soundtrack Films?
 
-Universal Pictures led the way in releasing rap soundtrack films, followed by Disney and Sony. Universal seems to have embraced rap soundtracks as a deliberate strategy.
+Universal Pictures led the way in releasing rap soundtrack films, accounting for 40% of such releases, followed by Disney at 25% and Sony at 20%. Universal particularly seems to have embraced rap soundtracks as a deliberate strategy.
 
 ![Studio Distribution](plots/distributors.png)
 
@@ -137,8 +137,8 @@ This project confirmed many of my hunches but also revealed some surprises. I le
 
 - Rap is a powerful soundtrack genre linked to strong box office performance.
 - Ratings-wise, rap films may underperform, but high-rated ones earn significantly more.
-- Distribution patterns suggest strategic seasonal timing (e.g., summer, Black History Month).
-- Universal Pictures has invested heavily in this trend.
+- Release patterns suggest strategic seasonal timing (e.g., summer, Black History Month).
+- Universal Pictures has taken the lead amoung common distributors, investing heavily in this trend.
 
 ### If I Had More Time...
 
@@ -155,32 +155,32 @@ This project confirmed many of my hunches but also revealed some surprises. I le
 project-root/
 │
 ├── data/
-│   ├── movies_2013_to_2023.csv
-│   ├── soundtrack_genres.csv
-│   └── spotify_genre_popularity.csv
+│   ├── final_movie_dataset.csv
+│   ├── movie_dataset.csv
+│   └── spotify_features.csv
 │
-├── images/
-│   ├── soundtrack_genre_distribution.png
-│   ├── box_office_averages.png
-│   ├── imdb_ratings_by_genre.png
-│   ├── revenue_vs_imdb_regression.png
-│   ├── mpaa_ratings_comparison.png
-│   ├── release_month_distribution.png
-│   ├── live_vs_animated.png
-│   ├── movie_genres_for_rap.png
-│   ├── soundtrack_trends_over_time.png
-│   └── studio_distribution.png
+├── plots/
+│   ├── animated_vs_live_action.png
+│   ├── distributors.png
+│   ├── genre_year.png
+│   ├── gross_earnings_by_genre.png
+│   ├── gross_earnings_imdb_ratings.png
+│   ├── imdb_rating_by_genre.png
+│   ├── mpaa_ratings.png
+│   ├── music_popularity.png
+│   ├── primary_movie_genre.png
+│   ├── rap_non_rap_seasons.png
+|   └── soundtrack_genres.png
 │
 ├── notebooks/
-│   ├── data_collection.ipynb
-│   ├── data_cleaning.ipynb
-│   └── analysis_visualizations.ipynb
+│   ├── data_collection_cleaning.ipynb
+│   └── data_visualizations.ipynb
 │
-└── rap_soundtracks_analysis.md
+└── README.md
 ```
 
 ---
 
 ## Final Thoughts
 
-This was one of the most rewarding and challenging projects I’ve taken on. As both a data analyst and a music fan, digging into this crossover between rap and film has been incredibly satisfying. There's still more to explore, but I hope this analysis helps spotlight the growing cultural and commercial influence of rap in the world of cinema.
+This was one of the most rewarding and challenging projects I’ve taken on. As both a data analyst and a music fan, digging into this crossover between rap and film has been incredibly satisfying. There's still more to explore, but I hope this analysis helps spotlight the growing cultural and commercial influence of rap in the world of cinema. This is my first major data analysis project, and I hope to take what I've learned and apply it to future projects.
